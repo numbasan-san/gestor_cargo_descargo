@@ -1,0 +1,27 @@
+04/03/2023
+Intenté hacer las tablas de la página principal del prototipo visual. Por algún motivo no se mostraban las separaciones. Por ahora todo está en HTML.
+
+---------------------------------------------------------------------------------------------------------------------------
+05/03/2023
+Cree una versión cuasi completa del index del protoipo visual. Por ahora todo está en HTML y el estilo es dado por Boostrap.
+
+El prototipo cuenta, hasta la fecha, con:
+- Una tabla con los datos nombre, apellido, fecha, hora y tipo. También cuenta con una opción que se llama "Más...", que es un enlace que, según se tiene planificado, llevará a una página con todo los datos del registro.
+- Un header genérico.
+- Un modal para el ingreso de nuevos registros y un botón para invocar el modal.
+
+Debo limpiar el header para mantener los elementos que fueren útiles.
+
+Cosas restantes:
+- Login.
+- Página de los datos del registro.
+- Función de generar el excel del registro y un word de un registro en específico.
+- Arreglar los datos de la tabla.
+
+---------------------------------------------------------------------------------------------------------------------------
+06/03/2023
+Logré hacer un prototipo funcional de la exportación de datos a excel, aunque es muy rústico y también es una función que en verdad no necesitaría tanto ahora, pues solamente estoy haciendo un prototipo visual. Otra cosa es que almacena toda la tabla, cosa que no debería ser, pero bueno, es lo que hay.
+
+También logré mudar a un archivo aparte el navbar para que se me hiciera mucho más simple la implementación del eso en otras pestañas. Engorroso en lo personal, pero algo que se aprende.
+
+Cosas restantes: No hay cambios.
