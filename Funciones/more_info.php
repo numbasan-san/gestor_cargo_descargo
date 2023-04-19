@@ -6,23 +6,19 @@
     require_once "serviceLog.php";
     require_once '../Class/registro.php';
     require_once "../FileHandler/JsonFH.php";
-    require_once "../FileHandler/SerializationFH.php";
 
     $layout = new Layout ();
     $service = new ServiceFile ();
-    $logvice = new ServiceLog ();
     $registro = null;
 
-    if ( isset ( $_GET [ "id" ] ) ) {
-
-        $registro = $service->GetById ( $_GET [ "id" ] );
-
+    if(isset($_GET["id"])){
+        $registro = $service->GetById($_GET["id"]);
     }
 
 ?>
-<?php echo $layout->printHeader (); ?>
-<?php if ( $registro == null ): ?>
-    <h2>Transacción inexistente.</h2>
+<?php echo $layout->printHeader(); ?>
+<?php if($registro == null): ?>
+    <h2>Registro inexistente.</h2>
 <?php else : ?>
     <!-- form action="edit.php" method="POST"></form -->
 
@@ -39,13 +35,11 @@
             <button class="btn btn-success">Exportar .doc</button>
         </div>
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <img src="" class="card-img" alt="RERORERORERORERORERORERORERORERO">
-                </div>
-            </div>
+            <center>
+                <embed src="docs/sample_output.pdf" type="application/pdf" withd="200px" height="450px" />
+            </center>            
         </div>
-    </div>
+    </div><img src="" class="card-img" alt="RERORERORERORERORERORERORERORERO">
 
 
 <?php endif; ?>

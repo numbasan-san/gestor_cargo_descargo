@@ -3,14 +3,13 @@
     require_once "Class/registro.php";
     require_once "Helpers/utilities.php";
     require_once "FileHandler/JsonFH.php";
-    require_once "FileHandler/SerializationFH.php";
     require_once "Funciones/serviceFile.php";
     require_once "Funciones/serviceLog.php";
     require_once "Layout/layout.php";
 
-    $utilities = new Utilities ();
-    $service = new ServiceFile ( true );
-    $layout = new Layout ( true );
+    $utilities = new Utilities();
+    $service = new ServiceFile(true);
+    $layout = new Layout(true);
 
     $registros = $service->GetList();
 
@@ -23,27 +22,27 @@
         </div>
     </div>
         <hr  />
-        <?php if (count($registros) == 0): ?>
-            <h2>No hay cargo o descargo alguno registrado.</h2>
-        <?php else : ?>
-            <table class="table table-bordered table-hover">
+    <?php if(count($registros) == 0): ?>
+        <h2>No hay cargo o descargo alguno registrado.</h2>
+    <?php else : ?>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td><p class="card-text"><b>Nombre</b></p></td>
+                <td><p class="card-text"><b>Fecha/Hora</b></p></td>
+                <td><p class="card-text"><b>Tipo</b></p></td>
+                <td><p class="card-text"><b>Aparatos</b></p></td>
+            </tr>
+            <?php foreach($registros as $registro): ?>
                 <tr>
-                    <td><p class="card-text"><b>Nombre</b></p></td>
-                    <td><p class="card-text"><b>Fecha/Hora</b></p></td>
-                    <td><p class="card-text"><b>Tipo</b></p></td>
-                    <td><p class="card-text"><b>Aparatos</b></p></td>
+                    <td><p class="card-text"><?= $registro->nombre ?></p></td>
+                    <td><p class="card-text"><?= $registro->fecha . " " . $registro->hora ?></p></td>
+                    <td><p class="card-text"><?= $registro->tipo ?></p></td>
+                    <td><p class="card-text"><?= $registro->equipos ?></p></td>
+                    <td><a href="Funciones/more_info.php?id=<?= $registro->id ?>" class="link">Más...</a></td>
                 </tr>
-                <?php foreach ($registros as $registro) : ?>
-                    <tr>
-                        <td><p class="card-text"><?= $registro->nombre ?></p></td>
-                        <td><p class="card-text"><?= $registro->fecha . " " . $registro->hora ?></p></td>
-                        <td><p class="card-text"><?= $registro->tipo ?></p></td>
-                        <td><p class="card-text"><?= $registro->equipos ?></p></td>
-                        <td><a href="Funciones/more_info.php?id=<?= $registro->id ?>" class="link">Más...</a></td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-        <?php endif; ?>
+            <?php endforeach; ?>
+        </table>
+    <?php endif; ?>
 </div>
 <div class="modal" id="modal-nueva-transaccion" tabindex="-1" aria-labelledby="modal-transacciones-label" aria-hidden="true">
     <div class="modal-dialog">
