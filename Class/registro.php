@@ -4,20 +4,20 @@
 
 		public $id;
 		public $nombre;
-		public $cedula;
 		public $fecha;
 		public $hora;
-		public $tipo;
+		public $tipo_registro;
+		public $tipo_equipo;
 		public $equipos;
 		public $seriales;
 
-		public function __construct ( $id, $nombre, $cedula, $fecha, $hora, $tipo, $equipos, $seriales ) {
+		public function __construct ( $id, $nombre, $fecha, $hora, $tipo_registro, $tipo_equipo, $equipos, $seriales ) {
 			$this->id = $id;
 			$this->nombre = $nombre;
-			$this->cedula = $cedula;
 			$this->fecha = $fecha;
 			$this->hora = $hora;
-			$this->tipo = $tipo;
+			$this->tipo_registro = $tipo_registro;
+			$this->tipo_equipo = $tipo_equipo;
 			$this->equipos = $equipos;
 			$this->seriales = $seriales;
 		}

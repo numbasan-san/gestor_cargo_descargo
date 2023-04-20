@@ -36,7 +36,7 @@
                 <tr>
                     <td><p class="card-text"><?= $registro->nombre ?></p></td>
                     <td><p class="card-text"><?= $registro->fecha . " " . $registro->hora ?></p></td>
-                    <td><p class="card-text"><?= $registro->tipo ?></p></td>
+                    <td><p class="card-text"><?= $registro->tipo_registro ?></p></td>
                     <td><p class="card-text"><?= $registro->equipos ?></p></td>
                     <td><a href="Funciones/more_info.php?id=<?= $registro->id ?>" class="link">Más...</a></td>
                 </tr>
@@ -55,23 +55,27 @@
                 <form action="Funciones/add.php" method="POST">
                     <div class="mb-3">
                         <label class="form-label" for="registro-nombre">Nombre:</label>
-                        <input type="text" name="nombre" class="form-control" id="inp_nombre">
+                        <input type="text" name="nombre" class="form-control" id="inp_nombre" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="registro-cedula">Cédula:</label>
-                        <input type="text" name="cedula" class="form-control" id="inp_cedula">
+                        <label class="form-label" for="registro-tipo">Tipo de Equipo:</label>
+                        <input type="text" name="tipo_equipo" class="form-control" id="inp_tipo" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="registro-tipo">Tipo:</label>
-                        <input type="text" name="tipo" class="form-control" id="inp_tipo">
+                        <label class="form-label" for="registro-tipo">Tipo de Registro:</label>
+                        <select class="form-select" aria-label="Default select example" name='tipo_registro' required>
+                            <option value=''>Elija uno</option>
+                            <option value="cargo">Cargo</option>
+                            <option value="descargo">Descargo</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="registro-equipos">Equipos:</label>
-                        <input type="text" name="equipos" class="form-control" id="inp_equipos">
+                        <input type="text" name="equipos" class="form-control" id="inp_equipos" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="registro-seriales">Seriales:</label>
-                        <input type="text" name="seriales" class="form-control" id="inp_seriales">
+                        <input type="text" name="seriales" class="form-control" id="inp_seriales" required>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
