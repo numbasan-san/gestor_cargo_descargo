@@ -1,27 +1,39 @@
 04/03/2023
-Intenté hacer las tablas de la página principal del prototipo visual. Por algún motivo no se mostraban las separaciones. Por ahora todo está en HTML.
+Intentï¿½ hacer las tablas de la pï¿½gina principal del prototipo visual. Por algï¿½n motivo no se mostraban las separaciones. Por ahora todo estï¿½ en HTML.
 
 ---------------------------------------------------------------------------------------------------------------------------
 05/03/2023
-Cree una versión cuasi completa del index del protoipo visual. Por ahora todo está en HTML y el estilo es dado por Boostrap.
+Cree una versiï¿½n cuasi completa del index del protoipo visual. Por ahora todo estï¿½ en HTML y el estilo es dado por Boostrap.
 
 El prototipo cuenta, hasta la fecha, con:
-- Una tabla con los datos nombre, apellido, fecha, hora y tipo. También cuenta con una opción que se llama "Más...", que es un enlace que, según se tiene planificado, llevará a una página con todo los datos del registro.
-- Un header genérico.
-- Un modal para el ingreso de nuevos registros y un botón para invocar el modal.
+- Una tabla con los datos nombre, apellido, fecha, hora y tipo. Tambiï¿½n cuenta con una opciï¿½n que se llama "Mï¿½s...", que es un enlace que, segï¿½n se tiene planificado, llevarï¿½ a una pï¿½gina con todo los datos del registro.
+- Un header genï¿½rico.
+- Un modal para el ingreso de nuevos registros y un botï¿½n para invocar el modal.
 
-Debo limpiar el header para mantener los elementos que fueren útiles.
+Debo limpiar el header para mantener los elementos que fueren ï¿½tiles.
 
 Cosas restantes:
 - Login.
-- Página de los datos del registro.
-- Función de generar el excel del registro y un word de un registro en específico.
+- Pï¿½gina de los datos del registro.
+- Funciï¿½n de generar el excel del registro y un word de un registro en especï¿½fico.
 - Arreglar los datos de la tabla.
 
 ---------------------------------------------------------------------------------------------------------------------------
 06/03/2023
-Logré hacer un prototipo funcional de la exportación de datos a excel, aunque es muy rústico y también es una función que en verdad no necesitaría tanto ahora, pues solamente estoy haciendo un prototipo visual. Otra cosa es que almacena toda la tabla, cosa que no debería ser, pero bueno, es lo que hay.
+Logrï¿½ hacer un prototipo funcional de la exportaciï¿½n de datos a excel, aunque es muy rï¿½stico y tambiï¿½n es una funciï¿½n que en verdad no necesitarï¿½a tanto ahora, pues solamente estoy haciendo un prototipo visual. Otra cosa es que almacena toda la tabla, cosa que no deberï¿½a ser, pero bueno, es lo que hay.
 
-También logré mudar a un archivo aparte el navbar para que se me hiciera mucho más simple la implementación del eso en otras pestañas. Engorroso en lo personal, pero algo que se aprende.
+Tambiï¿½n logrï¿½ mudar a un archivo aparte el navbar para que se me hiciera mucho mï¿½s simple la implementaciï¿½n del eso en otras pestaï¿½as. Engorroso en lo personal, pero algo que se aprende.
 
 Cosas restantes: No hay cambios.
+
+---------------------------------------------------------------------------------------------------------------------------
+21/04/2023
+
+Where are you? Have been a while.
+
+MigrÃ© todo a PHP y Python. Hace tres dÃ­a que reanudÃ© el proyecto y ya tengo el prototipo funcional.
+
+Cosas restantes:
+- Login.
+El resto de cosas por el momento estÃ¡n descartadas.
+

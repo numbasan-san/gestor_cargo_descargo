@@ -3,7 +3,6 @@
     require_once '../Layout/layout.php';
     require_once "../Helpers/utilities.php";
     require_once "serviceFile.php";
-    require_once "serviceLog.php";
     require_once '../Class/registro.php';
     require_once "../FileHandler/JsonFH.php";
 

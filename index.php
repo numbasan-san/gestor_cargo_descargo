@@ -4,7 +4,6 @@
     require_once "Helpers/utilities.php";
     require_once "FileHandler/JsonFH.php";
     require_once "Funciones/serviceFile.php";
-    require_once "Funciones/serviceLog.php";
     require_once "Layout/layout.php";
 
     $utilities = new Utilities();
@@ -31,6 +30,7 @@
                 <td><p class="card-text"><b>Fecha/Hora</b></p></td>
                 <td><p class="card-text"><b>Tipo</b></p></td>
                 <td><p class="card-text"><b>Aparatos</b></p></td>
+                <td><p class="card-text"></p></td>
             </tr>
             <?php foreach($registros as $registro): ?>
                 <tr>

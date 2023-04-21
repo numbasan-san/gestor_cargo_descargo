@@ -13,7 +13,16 @@
         $date = new DateTime();
 		$fecha = date ("d") . "/" . date ("m") . "/". date ("Y") ;
 		$hora = date ("H"). ":" . date ("i");
-        $registro = new Registro (0, $_POST["nombre"], $fecha, $hora, $_POST["tipo_equipo"], $_POST["equipos"], $_POST["tipo_registro"], $_POST["seriales"]);
+        $registro = new Registro (
+            0, 
+            $_POST["nombre"], 
+            $fecha, 
+            $hora, 
+            $_POST["tipo_registro"], 
+            $_POST["tipo_equipo"], 
+            $_POST["equipos"], 
+            $_POST["seriales"]
+        );
         $service->Add($registro);
         header("Location: ../index.php");
     // }
