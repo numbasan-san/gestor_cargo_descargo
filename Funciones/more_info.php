@@ -24,14 +24,16 @@
     <div class="row">
         <div class="col-md-4">
             <input type="hidden" name="id" value="<?= $registro->id ?>"></input>
-            <p class="card-text"><b>Nombre: </b><?= $registro->nombre ?></p>
-            <p class="card-text"><b>Fecha/Hora</b>: <?= $registro->fecha . " " . $registro->hora ?></p>
-            <p class="card-text"><b>Tipo: </b><?= $registro->tipo_registro ?></p>
-            <p class="card-text"><b>Tipo de Equipo: </b><?= $registro->tipo_equipo ?></p>
-            <p class="card-text"><b>Equipos: </b><?= $registro->equipos ?></p>
-            <p class="card-text"><b>Seriales: </b><?= $registro->seriales ?></p>
+            <p class="card-text"><b>Nombre: </b><?= $registro->nombre ?>.</p>
+            <p class="card-text"><b>Fecha/Hora</b>: <?= $registro->fecha . " " . $registro->hora ?>.</p>
+            <p class="card-text"><b>Tipo: </b><?= $registro->tipo_registro ?>.</p>
+            <p class="card-text"><b>Tipo de Equipo: </b><?= $registro->tipo_equipo ?>.</p>
+            <p class="card-text"><b>Equipos: </b><?= $registro->equipos ?>.</p>
+            <p class="card-text"><b>Seriales: </b><?= $registro->seriales ?>.</p>
                 <hr  />
             <a href="word_print.php?id=<?= $registro->id ?>" class="btn btn-success">Exportar .docx</a>
+            <a href="delete.php?id=<?= $registro->id ?>" class="btn btn-danger">Eliminar</a>
+            <a href="edit.php?id=<?= $registro->id ?>" class="btn btn-warning">Editar</a>
                 
         </div>
         <div class="col-md-8">
