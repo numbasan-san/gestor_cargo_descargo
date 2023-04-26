@@ -31,7 +31,7 @@
 					<div class="collapse navbar-collapse" id="navbarCollapse">
 						<ul class="navbar-nav me-auto mb-2 mb-md-0">
 							<li class="nav-item">
-								<a class="nav-link active" href="{$directory}index.php">Clasificar</a>
+								<a class="nav-link active" href="{$directory}Vistas/sort_out.php">Clasificar</a>
 							</li>
 						</ul>
 					</div>

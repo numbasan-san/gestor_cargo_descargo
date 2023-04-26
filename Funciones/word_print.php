@@ -6,7 +6,7 @@
     require_once '../Class/registro.php';
     require_once "../FileHandler/JsonFH.php";
 
-    $service = new ServiceFile ();
+    $service = new ServiceFile();
 
     if(isset($_GET["id"])){
         $registro = $service->GetById($_GET["id"]);

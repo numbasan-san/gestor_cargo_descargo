@@ -1,30 +1,18 @@
 <?php
-    
-    class ServiceFile {
+
+    class LogFile {
 
         private $fileHandler;
         private $utilities;
         private $directory;
         private $fileName;
 
-        public function __construct ($isRoot = false, $is_super_root = false) {
-            $subDirection = ($isRoot) ? "Funciones/" : ( ($is_super_root) ? "../Funciones/" : "" );
+        public function __construct ($isRoot = false) {
+            $subDirection = ($isRoot) ? "Funciones/" : "";
             $this->directory = "{$subDirection}data";
-            $this->fileName = "registros";
+            $this->fileName = "record";
             $this->fileHandler = new JsonFH();
             $this->utilities = new utilities();
-        }
-
-        public function data_lenght(){
-            $registros = $this->GetList();
-            $idGenerated = 0;
-            if (count($registros) == 0){
-                $idGenerated = 1;
-            } else {
-                $lastElement = $this->utilities->GetLastElement($registros);
-                $idGenerated = $lastElement->id + 1;
-            }
-            return $idGenerated;
         }
 
         public function Add($item) {
@@ -39,6 +27,7 @@
             $item->id = strval($idGenerated);
             array_push($registros, $item);
             $this->fileHandler->SaveFile($this->directory, $this->fileName, $registros);
+
         }
 
         public function Edit($item) {
