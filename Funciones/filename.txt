@@ -1,2 +1,0 @@
-['Eddy_Manuel_Peña_Ortega', '21/04/2023', 'PC', 'PC', 'Master', 'Race', 'cargo', 'QW12345']
-Segunda línea
