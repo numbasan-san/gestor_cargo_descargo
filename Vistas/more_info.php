@@ -31,7 +31,7 @@
             <p class="card-text"><b>Equipos: </b><?= $registro->equipos ?>.</p>
             <p class="card-text"><b>Seriales: </b><?= $registro->seriales ?>.</p>
                 <hr  />
-            <a href="word_print.php?id=<?= $registro->id ?>" class="btn btn-success">Exportar .docx</a>
+            <a href="../Funciones/word_print.php?id=<?= $registro->id ?>" class="btn btn-success">Exportar .docx</a>
             <a href="delete.php?id=<?= $registro->id ?>" class="btn btn-danger">Eliminar</a>
             <a href="edit.php?id=<?= $registro->id ?>" class="btn btn-warning">Editar</a>
                 

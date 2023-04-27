@@ -11,13 +11,17 @@
     $layout = new Layout();
 
     $registros = $service->GetList();
+    $registros_filtered = array();
 
-    echo count($registros);
-    /*
-    if(($tipo_regist) == $_GET("tipo_registro")){
-        
+    if(isset($_GET["tipo_registro"])){
+        foreach($registros as $registro){
+            if( ($registro->tipo_registro) == ($_GET["tipo_registro"]) ){
+                array_push($registros_filtered, $registro);
+            }
+        }
     }
-    */
+
+    /* if(($tipo_regist) == $_GET("tipo_registro")){ } */
 
 ?>
 <?php echo $layout->printHeader(); ?>
@@ -32,27 +36,31 @@
         </div>
     </div>
         <hr  />
-    <?php if(count($registros) == 0): ?>
-        <h2>No hay cargo o descargo alguno registrado.</h2>
+    <?php if(!(isset($_GET["tipo_registro"]))): ?>
+        <h2>No hay un criterio de clasificación establecido.</h2>
     <?php else : ?>
-        <table class="table table-bordered table-hover">
-            <tr>
-                <td><p class="card-text"><b>Nombre</b></p></td>
-                <td><p class="card-text"><b>Fecha/Hora</b></p></td>
-                <td><p class="card-text"><b>Tipo</b></p></td>
-                <td><p class="card-text"><b>Aparatos</b></p></td>
-                <td><p class="card-text"></p></td>
-            </tr>
-            <?php foreach($registros as $registro): ?>
-                    <tr>
-                        <td><p class="card-text"><?= $registro->nombre ?></p></td>
-                        <td><p class="card-text"><?= $registro->fecha . " " . $registro->hora ?></p></td>
-                        <td><p class="card-text"><?= $registro->tipo_registro ?></p></td>
-                        <td><p class="card-text"><?= $registro->equipos ?></p></td>
-                        <td><a href="Vistas/more_info.php?id=<?= $registro->id ?>" class="link">Más...</a></td>
-                    </tr>
-            <?php endforeach; ?>
-        </table>
+        <?php if(count($registros_filtered) == 0): ?>
+            <h2>No hay <?= $_GET["tipo_registro"] ?> alguno registrado.</h2>
+        <?php else : ?>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td><p class="card-text"><b>Nombre</b></p></td>
+                    <td><p class="card-text"><b>Fecha/Hora</b></p></td>
+                    <td><p class="card-text"><b>Tipo</b></p></td>
+                    <td><p class="card-text"><b>Aparatos</b></p></td>
+                    <td><p class="card-text"></p></td>
+                </tr>
+                <?php foreach($registros_filtered as $registro): ?>
+                        <tr>
+                            <td><p class="card-text"><?= $registro->nombre ?></p></td>
+                            <td><p class="card-text"><?= $registro->fecha . " " . $registro->hora ?></p></td>
+                            <td><p class="card-text"><?= $registro->tipo_registro ?></p></td>
+                            <td><p class="card-text"><?= $registro->equipos ?></p></td>
+                            <td><a href="more_info.php?id=<?= $registro->id ?>" class="link">Más...</a></td>
+                        </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
     <?php endif; ?>
 </div>
 <div class="modal" id="modal-nueva-transaccion" tabindex="-1" aria-labelledby="modal-transacciones-label" aria-hidden="true">
@@ -63,7 +71,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="Funciones/add.php" method="POST">
+                <form action="../Funciones/add.php" method="POST">
                     <div class="mb-3">
                         <label class="form-label" for="registro-nombre">Nombre:</label>
                         <input type="text" name="nombre" class="form-control" id="inp_nombre" required>
