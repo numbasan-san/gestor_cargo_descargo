@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+    </head>
+    <style>
+        table{
+            word-break: break-all !important;
+            white-space: nowrap !important;
+            width: 150px !important;
+        }
+        .data_content{
+            width: 250px !important;
+        }
+        #logo{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            z-index: -1;
+        }
+        .logo{
+            position: relative;
+        }
+        .title{
+            background-color: rgb(204, 217, 255) !important;
+            /* rgb(0, 32, 96) !important; color: white; */
+        }
+        .sub_title{
+            background-color: rgb(110, 173, 255) !important;
+            /* rgb(0, 112, 192) !important; color: white; */
+        }
+        .disclaymer{
+            color: rgb(154, 205, 179) !important;
+            /* color: rgb(166, 212, 187) !important; */
+        }
+        .legal-terms{
+            color: rgb(128, 167, 206) !important;
+            /* color: rgb(206, 224, 255) !important; */
+        }
+    </style>
+    <body>
+        <main class="container">
+            <div class="col-md-9" style="margin-top: 5%; margin-left: auto;margin-right: auto;">
+                <div class="float-end">
+                    <img class="" id="logo" src="gcs-logo.jfif" alt="RERORERORERO">
+                </div>
+                <center>
+                    <p class="disclaymer"><b>Uso interno</b></p>
+                    <h2><b>ANEXO 04 - CARGO EQUIPOS ELECTRÓNICOS</b></h2>
+                </center>
+                    <br  /><br  />
+                <p style="text-align: justify;">
+                    Quien suscribe, La Sra.: {$nombre}, Dominicano, mayor de edad, portador de la cédula de identidad y electoral No.:__________________________, domiciliado y residente en __________________________, de esta Ciudad de Santo Domingo, por medio del presente documento DECLARO, haber recibido de él/la Sr(a).:__________________________, portador de la cédula de identidad y electoral No.:__________________________, quien actúa como representante de la empresa GCS Systems, lo siguiente:
+                </p>
+                    <br  />
+                <center>
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <td class="title card-text text-center"><b>DESCRIPCIÓN</b></td>
+                            <td class="title card-text text-center"><b>DETALLES</b></td>
+                        </tr>
+                        <tr>
+                            <td class="card-text text-center sub_title"><b>EQUIPO</b></td>
+                            <td><p class="card-text data_content"><b>{$tipo_equipo}</b></p></td>
+                        </tr>
+                        <tr>
+                            <td class="card-text text-center sub_title"><b>TIPO DE EQUIPO</b></td>
+                            <td><p class="card-text data_content"><b>{$tipo_equipo}</b></p></td>
+                        </tr>
+                        <tr>
+                            <td class="card-text text-center sub_title"><b>MARCA</b></td>
+                            <td><p class="card-text data_content">{$equipos}</p></td>
+                        </tr>
+                        <tr>
+                            <td class="card-text text-center sub_title"><b>SERIAL</b></td>
+                            <td><p class="card-text data_content">{$seriales}</p></td>
+                        </tr>
+                        <tr>
+                            <td class="card-text text-center sub_title"><b>NÚMERO TELEFÓNICO</b></td>
+                            <td><p class="card-text data_content">qwertyu</p></td>
+                        </tr>
+                    </table>
+                </center>
+                    <br  />
+                <p style="text-align: justify;">
+                    Propiedad de la empresa GCS Systems LTD, los suscritos en el presente Recibo de Descargo, firman al pie del presente documento, en señal de aprobación de este.
+                        <br  /><br  />
+                    Al firmar este documento me comprometo a cumplir con los lineamientos establecidos en la POLÍTICA SERVICIOS TECNOLÓGICOS RCS-SEG-03-PL; así como con todas las políticas de Seguridad de la información y ciberseguridad de GCS Systems con sus procesos internos establecidos y divulgados.
+                        <br  /><br  />
+                    Hecho en dos (2) originales, una para cada parte firmante, en la Ciudad de Santo Domingo, Distrito Nacional, Capital de la República dominicana, a los {$day} días del mes de {$month} del año 2023.
+                </p>
+                    <br  /><br  /><br  />
+                <div class="row text-center">
+                    <div class="col">
+                        <p>
+                            ____________________________________________
+                            <br  />
+                            Nombre y Firma
+                            <br  />
+                            <b>DECLARANTE</b>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            ____________________________________________
+                            <br  />
+                            Nombre y Firma
+                            <br  />
+                            <b>REPRESENTANTE</b>
+                        </p>
+                    </div>
+                </div>
+                    <br  /><br  /><br  />
+                    <br  /><br  /><br  />
+                <div class="row text-center">
+                    <div class="col">
+                        <p class="legal-terms">
+                            <b>Código: RCS-SEG-03-PL</b>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="disclaymer">
+                            <b>Uso Interno</b>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="legal-terms">
+                            <b>V01</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br  /><br  /><br  />
+        </div>
+    </body>
+</html>
